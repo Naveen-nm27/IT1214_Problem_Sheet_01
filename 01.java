@@ -108,9 +108,9 @@ class problem01{
 
         class01.editAttendence(102,16);
 
-        //class01.stDetails(101);
-       // class01.stDetails(102);
-        //class01.stDetails(103);
+        class01.stDetails(101);
+        class01.stDetails(102);
+        class01.stDetails(103);
         class01.stDetails(104);
 
         
