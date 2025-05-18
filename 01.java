@@ -53,18 +53,33 @@ class Classroom{
 
     }
 
+    public boolean validateID(int id){
+            for(int item:stid){
+                if(item == id){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
     public void stDetails(int id){
 
-        for(int i = 0; i <= numberOfStudents;i++){
-            if(id == stid[i]){
-                System.out.println("Student Id - " + stid[i]);
-                System.out.println("+----------------+");
-                System.out.println("Student Name: " + stName[i]);
-                System.out.println("Attendence: "+daysAttended[i]+" Days");
-                System.out.println("+----------------+");
-                System.out.println();
+        if(validateID(id)){
+            for(int i = 0; i <= numberOfStudents;i++){
+                if(id == stid[i]){
+                    System.out.println("Student Id - " + stid[i]);
+                    System.out.println("+----------------+");
+                    System.out.println("Student Name: " + stName[i]);
+                    System.out.println("Attendence: "+daysAttended[i]+" Days");
+                    System.out.println("+----------------+");
+                    System.out.println();
+                } 
             }
+        } else {
+            System.out.println("Student is not Enrolled in this class");
         }
+
     }
 
     public void editAttendence(int id,int newDate){
@@ -93,10 +108,10 @@ class problem01{
 
         class01.editAttendence(102,16);
 
-        class01.stDetails(101);
-        class01.stDetails(102);
-        class01.stDetails(103);
-        //class01.stDetails(104);
+        //class01.stDetails(101);
+       // class01.stDetails(102);
+        //class01.stDetails(103);
+        class01.stDetails(104);
 
         
 
