@@ -7,8 +7,8 @@ Student(int studentId,String name,int daysAttended){
     this.studentId = studentId;
     this.name = name;
     this.daysAttended = daysAttended;
-
-    public String getStudentId(){
+}
+    public int getStudentId(){
         return studentId;
     }
 
@@ -35,15 +35,56 @@ Student(int studentId,String name,int daysAttended){
 }
 
 class Classroom{
-    int classStudent[] = new classStudent[10];
+    String stName[] = new String[9];
+    int stid[] = new int[9];
+    int daysAttended[] = new int[9]; 
+    int numberOfStudents = 0;
+    
+
+    public void addStudent(String S1,int id,int date){
+        if(numberOfStudents <= 9){
+            stName[numberOfStudents] = S1;
+            stid[numberOfStudents] = id;
+            daysAttended[numberOfStudents] = date;
+            numberOfStudents++;
+        }else{
+            System.out.println("Maximum Naumber of Studnts are added");
+        }
+
+    }
+
+    public void stDetails(int id){
+        for(int i = 0; i <= numberOfStudents;i++){
+            if(id == stid[i]){
+                System.out.println("Student Id - " + stid[i]);
+                System.out.println("----------------");
+                System.out.println("Student Name: " + stName[i]);
+                System.out.println("Attendence: "+daysAttended[i]+" Days");
+                System.out.println("----------------");
+            }
+        }
+    }
 
     
 }
 
-}
 
-class 01{
+class problem01{
     public static void main(String[] args){
+        Student st01 = new Student(101,"Alice Smith",12);
+        Student st02 = new Student(102,"Bob Jones",15);
+        Student st03 = new Student(103,"Carol Lee",10);
+        
+        Classroom class01 = new Classroom();
+
+        class01.addStudent(st01.getName(),st01.getStudentId(),st01.getdaysAttended());
+        class01.addStudent(st02.getName(),st02.getStudentId(),st02.getdaysAttended());
+        class01.addStudent(st03.getName(),st03.getStudentId(),st03.getdaysAttended());
+
+        class01.stDetails(101);
+        class01.stDetails(102);
+        class01.stDetails(103);
+
 
     }
 }
