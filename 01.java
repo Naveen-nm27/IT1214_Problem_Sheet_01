@@ -54,13 +54,23 @@ class Classroom{
     }
 
     public void stDetails(int id){
+
         for(int i = 0; i <= numberOfStudents;i++){
             if(id == stid[i]){
                 System.out.println("Student Id - " + stid[i]);
-                System.out.println("----------------");
+                System.out.println("+----------------+");
                 System.out.println("Student Name: " + stName[i]);
                 System.out.println("Attendence: "+daysAttended[i]+" Days");
-                System.out.println("----------------");
+                System.out.println("+----------------+");
+                System.out.println();
+            }
+        }
+    }
+
+    public void editAttendence(int id,int newDate){
+        for(int i = 0;i <= numberOfStudents;i++){
+            if(id == stid[i]){
+                daysAttended[i] = newDate;
             }
         }
     }
@@ -81,9 +91,14 @@ class problem01{
         class01.addStudent(st02.getName(),st02.getStudentId(),st02.getdaysAttended());
         class01.addStudent(st03.getName(),st03.getStudentId(),st03.getdaysAttended());
 
+        class01.editAttendence(102,16);
+
         class01.stDetails(101);
         class01.stDetails(102);
         class01.stDetails(103);
+        //class01.stDetails(104);
+
+        
 
 
     }
