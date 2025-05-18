@@ -53,14 +53,17 @@ class ParkingLot{
     public void rmVehicles(String licencePlate){
        for(int i = 0; i <= parkLimit;i++){
             if(licencePlate == parkedCarsLp[i]){
-                for(int k = 0;k <= i;k++){
+                    parkedCarsLp[i] = null;
+                    parkedOwner[i] = null;
+                    parkedHours[i] = 0;
+                    System.out.println("licence Plate " + licencePlate + " Was Removed");
+                for(int k = 0;k < i;k++){
                     parkedCarsLp[k] = parkedCarsLp[k + 1];
                     parkedOwner[k] = parkedOwner[k + 1];
-                    parkedOwner[k] = parkedOwner[k + 1];
+                    parkedHours[k] = parkedHours[k + 1];
                     parkLimit--;
                     break;
                 }
-
             }
        }
     }
@@ -73,8 +76,16 @@ class ParkingLot{
                 System.out.println("Parked For " + parkedHours[i] + " Hours");
                 break;
             }
+        }
+    }
 
-
+    public void printAllVehicle(){
+        for(int i = 0; i <= 0; i++){
+                System.out.println("Licence Plate: " + parkedCarsLp[i]);
+                System.out.println("-------");
+                System.out.println("Owner: " + parkedOwner[i]);
+                System.out.println("Parked For " + parkedHours[i] + " Hours");
+                System.out.println();
         }
     }
 
@@ -92,9 +103,14 @@ class problem02 {
         p01.addVehicles(v02.getLicencePlate(),v02.getOwnerName(),v02.gethourseParked());
         p01.addVehicles(v03.getLicencePlate(),v03.getOwnerName(),v03.gethourseParked());
 
-        p01.rmVehicles("LMN456");
+        p01.rmVehicles("ABC123");
 
-        p01.printVehicles("XYZ789");
+        //p01.printVehicles("XYZ789");
+        //p01.printVehicles("ABC123");
+        //p01.printVehicles("LMN456");
+
+        p01.printAllVehicle();
+
     }
 
 
