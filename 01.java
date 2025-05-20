@@ -82,10 +82,24 @@ class Classroom{
 
     }
 
-    public void editAttendence(int id,int newDate){
-        for(int i = 0;i <= numberOfStudents;i++){
+    public void editAttendance(int id,int newDate){
+        if (validateID(id)){
+                    for(int i = 0;i <= numberOfStudents;i++){
             if(id == stid[i]){
                 daysAttended[i] = newDate;
+            }
+        }
+        } else{
+            System.out.println("Student " +id+ " is not enrolled in this class");
+        }
+
+    }
+
+    public void printClass(){
+        System.out.println(("Student ID | \tStudent Name | \tAttendance"));
+            for(int i = 0;i<=numberOfStudents;i++){
+            if(stid[i] != 0){
+            System.out.println("-" + stid[i] + "\t\t" + stName[i] + "\t" + daysAttended[i]);
             }
         }
     }
@@ -106,14 +120,14 @@ class problem01{
         class01.addStudent(st02.getName(),st02.getStudentId(),st02.getdaysAttended());
         class01.addStudent(st03.getName(),st03.getStudentId(),st03.getdaysAttended());
 
-        class01.editAttendence(102,16);
+        class01.editAttendance(104,16);
 
-        class01.stDetails(101);
-        class01.stDetails(102);
-        class01.stDetails(103);
-        class01.stDetails(104);
+        //class01.stDetails(101);
+        //class01.stDetails(102);
+        //class01.stDetails(103);
+        //class01.stDetails(104);
 
-        
+        class01.printClass();
 
 
     }
