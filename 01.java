@@ -35,9 +35,9 @@ Student(int studentId,String name,int daysAttended){
 }
 
 class Classroom{
-    String stName[] = new String[9];
-    int stid[] = new int[9];
-    int daysAttended[] = new int[9]; 
+    String stName[] = new String[10];
+    int stid[] = new int[10];
+    int daysAttended[] = new int[10]; 
     int numberOfStudents = 0;
     
 
