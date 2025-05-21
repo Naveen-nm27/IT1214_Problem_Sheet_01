@@ -40,16 +40,16 @@ class BankAccounnt{
             if(balance >= ammount){
                 balance-=ammount;
             } else {
-                int error = 1/0;
+                throw new IllegalArgumentException("Insufficient Balance");
             }
                 
     } catch (IllegalArgumentException e) {
-            System.out.println("Insefitient Crdit in your account for the Withdrale");
+
     }
 }
 
 class Bank{
-    ArrayList <> accID = new ArrayList<>();
+    ArrayList <> Accounts = new ArrayList<>();
     numberofAccount = 0;
     
     public void addAccount(){
@@ -61,6 +61,6 @@ class Bank{
 
 class Problem03{
     public static void main(String[] args){
-
+        BankAccounnt acc01 = new BankAccounnt()
     }
 }
