@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class BankAccounnt{
     private int accountNumber();
     private String accountHolder();
@@ -46,8 +48,19 @@ class BankAccounnt{
     }
 }
 
+class Bank{
+    ArrayList <> accID = new ArrayList<>();
+    numberofAccount = 0;
+    
+    public void addAccount(){
+        numberofAccount++;
+    }
+
+
+}
+
 class Problem03{
-    public static void main(String args[]){
+    public static void main(String[] args){
 
     }
 }
