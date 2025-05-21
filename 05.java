@@ -6,13 +6,13 @@ class Students{
 	private int exam3;
 	private int exam2;
 	
-	boolean validateMarks(int marks) throws Exception{
+	boolean validateMarks(int marks) {
 		if(marks<=100 && marks>=0){
 			return true;
 			}
 		else{
 			return false;
-			throw new Exception("Exception!")
+			throw new Exception("Erroer");
 		}
 	}
 	
