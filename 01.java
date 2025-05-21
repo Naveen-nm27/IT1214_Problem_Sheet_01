@@ -108,7 +108,7 @@ class Classroom{
 }
 
 
-class problem01{
+class Problem01{
     public static void main(String[] args){
         Student st01 = new Student(101,"Alice Smith",12);
         Student st02 = new Student(102,"Bob Jones",15);

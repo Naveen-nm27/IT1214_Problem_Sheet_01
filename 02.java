@@ -97,7 +97,7 @@ class ParkingLot{
 
 }
 
-class problem02 {
+class Problem02 {
     public static void main(String[] args){
         Vehicle v01 = new Vehicle("ABC123","John Doe",2);
         Vehicle v02 = new Vehicle("XYZ789","Jane Smith",5);
